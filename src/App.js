@@ -5,15 +5,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          구수현ㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+          스토비스 오픈 준비중
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://hyunin2021.github.io/stovice/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reactㅁㄴㅇㄴㅁㄴㅇㅁ
+          Stovice 창립자 CEO 링크글 참고.
         </a>
       </header>
     </div>
