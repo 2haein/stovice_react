@@ -1,4 +1,5 @@
 import './App.css';
+import TodoListTemplate from './components/TodoListTemplate';
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
         <p>
           스토비스 오픈 준비중
         </p>
+        <TodoListTemplate>
+        템플릿 기초 구축중
+      </TodoListTemplate>
         <a
           className="App-link"
           href="https://hyunin2021.github.io/stovice/"
