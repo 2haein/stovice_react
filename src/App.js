@@ -9,7 +9,7 @@ function App() {
           스토비스 오픈 준비중
         </p>
         <TodoListTemplate>
-        템플릿 기초 구축중
+        aasdsda
       </TodoListTemplate>
         <a
           className="App-link"
