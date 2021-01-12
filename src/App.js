@@ -1,5 +1,6 @@
 import './App.css';
 import TodoListTemplate from './components/TodoListTemplate';
+import Button from '@material-ui/core/Button';
 
 function App() {
   return (
@@ -11,15 +12,13 @@ function App() {
         <TodoListTemplate>
         aasdsda
       </TodoListTemplate>
-        <a
-          className="App-link"
-          href="https://hyunin2021.github.io/stovice/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Stovice 창립자 CEO 링크글 참고.
-        </a>
+       
+        <Button variant="contained" color="primary" target="_blank" rel="noopener noreferrer"
+        href="https://hyunin2021.github.io/stovice/">
+      Stovice 창립자 CEO 링크글 참고.
+    </Button>
       </header>
+     
     </div>
   );
 }
