@@ -44,7 +44,7 @@ function App() {
         </AppBar>
       </div>
       <header className="App-header">
-        <p>스토비스 오픈 준비중123123123</p>
+        <p>스토비스 오픈 준비중121113</p>
         <TodoListTemplate>aasdsda</TodoListTemplate>
 
         <Button
