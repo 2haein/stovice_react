@@ -1,18 +1,19 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { Link, Route } from 'react-router-dom';
-import About from './About';
+import About from './route/About';
 import Button from '@material-ui/core/Button';
 import './App.css';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 import TodoTemplate from './components/TodoTemplate';
-import Home from './Home';
+import Home from './route/Home';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Profiles from './route/Profiles';
 
 const App = () => {
   const useStyles = makeStyles((theme) => ({
@@ -107,10 +108,14 @@ const App = () => {
           <li>
             <Link to="/about">소개</Link>
           </li>
+          <li>
+            <Link to="/profiles">프로필</Link>
+          </li>
         </ul>
         <hr />
         <Route path="/" component={Home} exact={true} />
-        <Route path="/about" component={About} />
+        <Route path={['/about', '/info']} component={About} />
+        <Route path="/profiles" component={Profiles} />
         <Button
           className="Main-link"
           variant="contained"
