@@ -1,14 +1,20 @@
-import "./App.css";
-import TodoListTemplate from "./components/TodoListTemplate";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import React, { useCallback, useRef, useState } from 'react';
+import { Link, Route } from 'react-router-dom';
+import About from './About';
+import Button from '@material-ui/core/Button';
+import './App.css';
+import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
+import TodoTemplate from './components/TodoTemplate';
+import Home from './Home';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-function App() {
+const App = () => {
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -22,11 +28,57 @@ function App() {
   }));
 
   const classes = useStyles();
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      text: '스토비스에 대하여',
+      checked: true,
+    },
+    {
+      id: 2,
+      text: '주식 경제 알리미',
+      checked: true,
+    },
+    {
+      id: 3,
+      text: '일정관리 주식 어플',
+      checked: false,
+    },
+  ]);
+  const nextId = useRef(4);
+  const onInsert = useCallback(
+    (text) => {
+      const todo = {
+        id: nextId.current,
+        text,
+        checked: false,
+      };
+      setTodos(todos.concat(todo));
+      nextId.current += 1;
+    },
+    [todos],
+  );
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos],
+  );
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+        ),
+      );
+    },
+    [todos],
+  );
 
   return (
-    <div className="App">
+    <>
       <div className={classes.root}>
-        <AppBar position="fixed">
+        <AppBar className="App" position="fixed">
           <Toolbar>
             <IconButton
               edge="start"
@@ -43,11 +95,24 @@ function App() {
           </Toolbar>
         </AppBar>
       </div>
-      <header className="App-header">
-        <p>스토비스 오픈 준비중121113</p>
-        <TodoListTemplate>aasdsda</TodoListTemplate>
-
+      <TodoTemplate>
+        <TodoInsert onInsert={onInsert} />
+        <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
+      </TodoTemplate>
+      <div className="App-header">
+        <ul>
+          <li>
+            <Link to="/">홈</Link>
+          </li>
+          <li>
+            <Link to="/about">소개</Link>
+          </li>
+        </ul>
+        <hr />
+        <Route path="/" component={Home} exact={true} />
+        <Route path="/about" component={About} />
         <Button
+          className="Main-link"
           variant="contained"
           color="primary"
           target="_blank"
@@ -56,9 +121,9 @@ function App() {
         >
           Stovice 창립자 CEO 링크글 참고.
         </Button>
-      </header>
-    </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
