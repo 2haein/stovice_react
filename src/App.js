@@ -14,6 +14,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Profiles from './route/Profiles';
+// import axios from '../node_modules/axios/index';
+import NewsPage from './pages/NewsPage';
 
 const App = () => {
   const useStyles = makeStyles((theme) => ({
@@ -32,17 +34,17 @@ const App = () => {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      text: '스토비스에 대하여',
-      checked: true,
+      text: '스토비스 경제 주식알리미',
+      checked: false,
     },
     {
       id: 2,
-      text: '주식 경제 알리미',
-      checked: true,
+      text: '관련 일정을 입력해주세요',
+      checked: false,
     },
     {
       id: 3,
-      text: '일정관리 주식 어플',
+      text: '추가 및 수정이 가능합니다',
       checked: false,
     },
   ]);
@@ -75,11 +77,10 @@ const App = () => {
     },
     [todos],
   );
-
   return (
     <>
       <div className={classes.root}>
-        <AppBar className="App" position="fixed">
+        <AppBar heigh className="App" position="fixed">
           <Toolbar>
             <IconButton
               edge="start"
@@ -96,11 +97,16 @@ const App = () => {
           </Toolbar>
         </AppBar>
       </div>
-      <TodoTemplate>
-        <TodoInsert onInsert={onInsert} />
-        <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
-      </TodoTemplate>
-      <div className="App-header">
+      <div>
+        <TodoTemplate>
+          <TodoInsert onInsert={onInsert} />
+          <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
+        </TodoTemplate>
+      </div>
+      <div className="App-content">
+        <Route path="/:category?" component={NewsPage} />
+      </div>
+      <div className="App-bottom">
         <ul>
           <li>
             <Link to="/">홈</Link>

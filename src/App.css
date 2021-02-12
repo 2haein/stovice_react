@@ -25,6 +25,32 @@
   color: white;
 }
 
+.App-content {
+  background-color: #e8f3fd;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content:center;
+  padding-top: 10vh;
+  font-size: 20px;
+  padding-left: 5rem;
+  /* color: white; */
+}
+
+
+.App-bottom {
+  background-color: #5b9bdb;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content:center;
+  margin-top: 0vh;
+  font-size: 18px;
+  color: white;
+}
+
 
 .App-link {
   color: #0c3621;

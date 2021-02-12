@@ -6,7 +6,7 @@ const data = {
     description: '스토비스 주식관련 알리미',
   },
   haein: {
-    name: '해인',
+    name: '핸',
     description: '스토비스 개발자입니다.',
   },
 };
