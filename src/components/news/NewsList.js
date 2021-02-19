@@ -30,9 +30,9 @@ const NewsList = ({ category }) => {
   // eslint-disable-next-line no-unused-vars
   const [loading, response, error] = usePromise(() => {
     const query = category === 'all' ? '' : `&category=${category}`;
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     return axios.get(
-      `${proxyUrl}https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=b9a33c7ed46f4792b560f9fd919f2535`,
+      `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=b9a33c7ed46f4792b560f9fd919f2535`,
     );
   }, [category]);
 

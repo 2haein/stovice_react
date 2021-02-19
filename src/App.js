@@ -15,7 +15,12 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Profiles from './route/Profiles';
 // import axios from '../node_modules/axios/index';
-import NewsPage from './pages/NewsPage';
+// import NewsPage from './pages/NewsPage';
+import PostListPage from './pages/PostListPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import WritePage from './pages/WritePage';
+import PostPage from './pages/PostPage';
 
 const App = () => {
   const useStyles = makeStyles((theme) => ({
@@ -80,7 +85,7 @@ const App = () => {
   return (
     <>
       <div className={classes.root}>
-        <AppBar heigh className="App" position="fixed">
+        <AppBar height="true" className="App" position="fixed">
           <Toolbar>
             <IconButton
               edge="start"
@@ -104,7 +109,12 @@ const App = () => {
         </TodoTemplate>
       </div>
       <div className="App-content">
-        <Route path="/:category?" component={NewsPage} />
+        {/* <Route path="/:category?" component={NewsPage} /> */}
+        <Route component={PostListPage} path={['/@:username', '/']} exact />
+        <Route component={LoginPage} path="/login" />
+        <Route component={RegisterPage} path="/reigster" />
+        <Route component={WritePage} path="/write" />
+        <Route component={PostPage} path="/@:username/:postId" />
       </div>
       <div className="App-bottom">
         <ul>
