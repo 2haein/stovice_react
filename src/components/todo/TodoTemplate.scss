@@ -1,22 +1,22 @@
 .TodoTemplate{
-    width: 300px;
+    width: 250px;
     // display: flex;
     // margin: auto;
     position: fixed;
     // float: right;
-    margin-left: 70%;
+    margin-left: 1%;
     // justify-content: end;
-    margin-top: 10rem;
+    margin-top: 11rem;
     border-radius: 4px;
     overflow: hidden;
     z-index: 0;
-    opacity: 0.7;
+    opacity: 0.5;
 
     .app-title{
         background: #22b8cf;
         color: white;
-        height: 3rem;
-        font-size: 1.5rem;
+        height: 2rem;
+        font-size: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;

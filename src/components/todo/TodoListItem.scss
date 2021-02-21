@@ -11,11 +11,12 @@
         display: flex;
         align-items: center;
         svg{
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         .text{
             margin-left: 0.5rem;
             flex:1;
+            font-size: 0.7rem;
         }
         &.checked{
             svg{
@@ -30,7 +31,7 @@
     .remove{
         display: flex;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         color: #ff6b6b;
         cursor: pointer;
         &:hover{
