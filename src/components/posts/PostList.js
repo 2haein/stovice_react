@@ -40,6 +40,11 @@ const PostItemBlock = styled.div`
   }
 `;
 
+const PostContent = styled.div`
+  font-size: 1.3125rem;
+  color: ${palette.gray[8]};
+`;
+
 const PostItem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
 
@@ -53,7 +58,7 @@ const PostItem = ({ post }) => {
         publishedDate={new Date(publishedDate)}
       />
       <Tags tags={tags} />
-      <p>{body}</p>
+      <PostContent dangerouslySetInnerHTML={{ __html: body }} />
     </PostItemBlock>
   );
 };
