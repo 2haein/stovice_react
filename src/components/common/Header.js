@@ -6,8 +6,8 @@ import Button from './Button';
 
 const HeaderBlock = styled.div`
   position: fixed;
-  width: 90%;
-  margin-top: -65%;
+  width: 100%;
+  top: 10%;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 `;
@@ -49,7 +49,7 @@ const Header = ({ user, onLogout }) => {
       <HeaderBlock>
         <Wrapper>
           <Link to="/" className="logo">
-            REACTERS
+            STOVICE
           </Link>
           {user ? (
             <div className="right">
