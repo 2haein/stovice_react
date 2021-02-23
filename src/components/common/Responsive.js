@@ -5,6 +5,7 @@ const ResponsiveBlock = styled.div`
   padding-left: 1rem;
   padding-right: 2rem;
   width: 1024px;
+  margin-top: 46rem;
   margin: 0 auto; /* 중앙 정렬 */
   /* 브라우저 크기에 따라 가로 사이즈 변경 */
   @media (max-width: 1024px) {
