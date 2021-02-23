@@ -8,7 +8,7 @@ import Tags from '../common/Tags';
 import { Link } from 'react-router-dom';
 
 const PostListBlock = styled(Responsive)`
-  margin-top: 3rem;
+  // margin-top: 3rem;
 `;
 
 const WritePostButtonWrapper = styled.div`
