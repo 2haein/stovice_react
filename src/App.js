@@ -32,6 +32,7 @@ const App = () => {
     },
     title: {
       flexGrow: 1,
+      fontSize: 30,
     },
   }));
 
@@ -96,7 +97,7 @@ const App = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              스토비스
+              <Link to="/">스토비스</Link>
             </Typography>
             <Button color="inherit">LOGIN</Button>
           </Toolbar>
