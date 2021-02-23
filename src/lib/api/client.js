@@ -7,7 +7,7 @@ const client = axios.create();
 // API 주소를 다른 곳으로 사용함
 // client.defaults.baseURL = 'http://localhost:4000';
 // 배포할 때 API
-client.defaults.baseURL = 'http://13.125.216.198:4000';
+client.defaults.baseURL = 'https://stovice.com';
 // 헤더 설정
 // client.defaults.headers.common['Authorization'] = 'Bearer a1b2c3d4';
 // 인터셉터 설정
