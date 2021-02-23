@@ -97,7 +97,7 @@ const App = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              <Link to="/">스토비스</Link>
+              <Link to="/">선영</Link>
             </Typography>
             <Button color="inherit">LOGIN</Button>
           </Toolbar>
