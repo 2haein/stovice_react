@@ -11,7 +11,6 @@ const PostViewerBlock = styled(Responsive)`
 const PostHead = styled.div`
   border-bottom: 1px solid ${palette.gray[2]};
   padding-bottom: 3rem;
-  margin-bottom: 3rem;
   h1 {
     font-size: 3rem;
     line-height: 1.5;

@@ -4,10 +4,10 @@ import Button from '../common/Button';
 
 const WriteActionButtonsBlock = styled.div`
   margin-top: 1rem;
-  margin-bottom: 3rem;
   button + button {
     margin-left: 0.5rem;
   }
+  margin-bottom: 1rem;
 `;
 
 /* TagBox에서 사용하는 버튼과 일치하는 높이로 설정 후 서로 간의 여백 지정 */
