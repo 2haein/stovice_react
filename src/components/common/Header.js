@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Responsive from './Responsive';
 import Button from './Button';
+import logo from '../../assets/png/logo.png';
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -49,7 +50,7 @@ const Header = ({ user, onLogout }) => {
       <HeaderBlock>
         <Wrapper>
           <Link to="/" className="logo">
-            STOVICE
+            <img src={logo} width="160" height="40" alt="STOVICE" />
           </Link>
           {user ? (
             <div className="right">
